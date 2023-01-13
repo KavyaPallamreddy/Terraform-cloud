@@ -2,7 +2,7 @@ resource "aws_instance" "my-ec2-vm" {
   ami                    = data.aws_ami.amzlinux.id
   instance_type          = var.ec2_instance_type
   key_name               = "terraform-key"
-  count                  = 1
+  count                  = 2
   user_data              = file("apache-install.sh")
   
   
